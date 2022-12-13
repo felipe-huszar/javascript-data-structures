@@ -3,7 +3,7 @@ class Queue {
         this.items = {};
         this.rear = 0;
         this.front = 0;
-    }    
+    }
 
     enqueue(element) {
         this.items[this.rear] = element;
@@ -17,16 +17,16 @@ class Queue {
         return item;
     }
 
+    size() {
+        return this.rear - this.front;
+    }
+
     isEmpty() {
-        return this.rear - this.front === 0;
+        return this.size() === 0;
     }
 
     peek() {
         return this.items[this.front];
-    }
-
-    size() {
-        return this.rear - this.front;
     }
 
     print() {
@@ -34,4 +34,4 @@ class Queue {
     }
 }
 
-module.exports = Queue
+module.exports = Queue;
